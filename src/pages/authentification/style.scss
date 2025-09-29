@@ -1,0 +1,20 @@
+.p-Authentification 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .c-Login, .c-Register
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        form 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
