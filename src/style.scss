@@ -6,7 +6,8 @@
 
     --black-color: black;
     --white-color: white;
-    --gray-color: #B1B1B1;
+    --gray-color: rgba(167, 167, 167, 0.25);
+    --gray-color1: rgb(173, 173, 173);
 
     --main-font: Inter;
 }
@@ -16,10 +17,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--main-font);
 }
 
 body 
 {
     background-color: var(--background-color);
-    font-family: var(--main-font);
+}
+
+img 
+{
+    object-fit: cover;
+    object-position: center;
 }

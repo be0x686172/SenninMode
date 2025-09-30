@@ -1,6 +1,6 @@
 import './style.scss';
 
-const Register = ({ setMode }) => {
+const Register = () => {
     return (
         <div className='component c-Register'>
             <form>
@@ -18,7 +18,6 @@ const Register = ({ setMode }) => {
                 </div>
                 <input type="submit" />
             </form>
-            <button onClick={() => {setMode('login')}}>Login</button>
         </div>
     );
 };
