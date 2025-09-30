@@ -15,7 +15,7 @@ const Authentification = () => {
                 <h1>Welcome to SenninMode</h1>
                 <p>Your Pomodoro Application</p>
             </div>
-            {mode == 'login' ? <Login setMode={setMode} /> : <Register setMode={setMode} />}
+            {mode == 'login' ? <Login /> : <Register />}
             {mode == 'login' ? <p>New user ? <button onClick={() => setMode('register')}>Register</button></p> : <p>Already have an account ? <button onClick={() => setMode('login')}>Login</button></p>}
         </div>
     );
