@@ -2,7 +2,7 @@ import './style.scss';
 
 const SubmitInput = ({value}) => {
     return (
-        <input type="submit" value={value}/>
+        <input className='component c-submitInput' type="submit" value={value}/>
     );
 };
 

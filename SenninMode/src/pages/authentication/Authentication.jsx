@@ -9,10 +9,10 @@ const Authentication = () => {
     const [authMode, setAuthMode] = useState("signIn");
 
     return (
-        <div id='page p-authentication'>
+        <div id='page' className='p-authentication'>
             <h1>Welcome to SenninMode</h1>
-            <p>Enter SenninMode : focus and master your time.</p>
-            <AuthenticationToggle setAuthMode={setAuthMode} />
+            <p>Focus and master your time.</p>
+            <AuthenticationToggle authMode={authMode} setAuthMode={setAuthMode} />
             {authMode == "signIn" ? <AuthenticationSignIn /> : <AuthenticationSignUp />}
         </div>
     );

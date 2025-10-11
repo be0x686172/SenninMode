@@ -7,7 +7,7 @@ const AuthenticationSignUp = () => {
         <form className='component c-authenticationSignUp'> 
             <TextInput label="Email address" type="email" name="email" placeholder="example@mail.com"/>
             <TextInput label="Password" type="password" name="password" placeholder="********"/>
-            <TextInput label="Confirm password" type="password" name="password" placeholder="Confirm your password"/>
+            <TextInput label="Confirm your password" type="password" name="password" placeholder="********"/>
             <SubmitInput value="Sign Up"/>
         </form>
     );

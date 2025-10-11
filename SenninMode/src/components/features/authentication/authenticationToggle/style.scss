@@ -1,0 +1,37 @@
+.c-authenticationToggle 
+{
+    position: relative;
+    display: flex;
+    border: 1px solid var(--color-bg-secondary);
+    padding: 5px;
+    border-radius: 5px;
+
+    button 
+    {
+        border: none;
+        font-size: var(--font-size-s);
+        background-color: transparent;
+        color: var(--color-text-secondary);
+        font-weight: var(--font-weight-xs);
+        padding: 12px 80px;
+        border-radius: 5px;
+    }
+
+    .active
+    {
+        background-color: var(--color-bg-secondary);
+        color: var(--color-text-primary);
+        font-weight: var(--font-weight-s);
+    }
+
+    .d-slider 
+    {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        // background-color: var(--color-bg-secondary);
+        z-index: -1;
+    }
+}

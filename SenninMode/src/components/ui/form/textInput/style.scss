@@ -1,0 +1,26 @@
+.c-textInput 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label 
+    {
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-m);
+    }
+
+    input 
+    {
+        width: 100%;
+        border: 1px solid var(--color-bg-secondary);
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+
+        &::placeholder 
+        {
+            color: var(--color-text-secondary);
+        }
+    }
+}
