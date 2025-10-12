@@ -1,9 +1,10 @@
 .c-submitInput 
 {
-    background-color: var(--color-bg-secondary);
-    padding: 12px 0px;
+    background-color: var(--color-bg-primary);
+    padding: var(--padding-vertically-button) 0px;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius-primary);
     font-size: 0.9em;
+    width: 100%;
 }

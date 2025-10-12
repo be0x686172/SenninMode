@@ -1,10 +1,11 @@
 .c-authenticationToggle 
 {
-    position: relative;
+    // position: relative;
     display: flex;
-    border: 1px solid var(--color-bg-secondary);
+    border: 1px solid var(--color-border-primary);
     padding: 5px;
-    border-radius: 5px;
+    border-radius: var(--border-radius-primary);
+    width: 85%;
 
     button 
     {
@@ -13,25 +14,26 @@
         background-color: transparent;
         color: var(--color-text-secondary);
         font-weight: var(--font-weight-xs);
-        padding: 12px 80px;
-        border-radius: 5px;
+        padding: var(--padding-vertically-button) 0px;
+        border-radius: var(--border-radius-primary);
+        width: 100%;
     }
 
     .active
     {
-        background-color: var(--color-bg-secondary);
+        background-color: var(--color-bg-primary);
         color: var(--color-text-primary);
         font-weight: var(--font-weight-s);
     }
 
-    .d-slider 
+    /*.d-slider 
     {
         top: 0;
-        left: 50%;
+        left: 0%;
         width: 50%;
         height: 100%;
         position: absolute;
-        // background-color: var(--color-bg-secondary);
+        background-color: var(--color-bg-primary);
         z-index: -1;
-    }
+    }*/
 }

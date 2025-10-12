@@ -3,11 +3,13 @@
 :root 
 {
     // Colors
-    --color-bg-primary: #fff;
-    --color-bg-secondary: rgb(250, 224, 224);
+    --color-bg-primary: rgb(250, 224, 224);
+
+    --color-border-primary: rgb(250, 224, 224);
 
     --color-text-primary: #000;
     --color-text-secondary: rgb(105, 105, 105);
+    --color-text-tertiary: rgb(168, 168, 168);
     
     // Fonts & Font size & Font weight
     --font-family-primary: Inter;
@@ -26,7 +28,11 @@
     --font-weight-xl: 700;
 
     // Margin & Padding & Gap
+    --padding-vertically-button: 13px;
+    --padding-text-input: 10px;
+
     // Borders radius
+    --border-radius-primary: 5px;
 }
 
 * 
@@ -35,11 +41,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-family-primary);
-}
-
-body 
-{
-    background-color: var(--color-bg);
 }
 
 img 
@@ -51,5 +52,5 @@ img
 a 
 {
     text-decoration: none;
-    color: black;
+    color: var(--color-text-primary);
 }

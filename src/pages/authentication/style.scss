@@ -6,7 +6,6 @@
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
     width: 500px;
@@ -21,8 +20,16 @@
     & > p 
     {
         font-size: var(--font-size-s);
-        font-weight: var(--font-weight-xs);
-        color: var(--color-text-secondary);
+        font-weight: var(--font-weight-xxs);
+        color: var(--color-text-tertiary);
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .p-authentication 
+    {
+        width: 90%;
     }
 }
