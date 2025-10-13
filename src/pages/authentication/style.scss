@@ -1,4 +1,4 @@
-.p-authentication 
+.p-authentication
 {
     position: absolute;
     top: 50%;
@@ -10,14 +10,14 @@
     gap: 20px;
     width: 500px;
 
-    h1 
+    h1
     {
         font-size: var(--font-size-l);
         font-weight: var(--font-weight-xs);
         text-align: center;
     }
 
-    & > p 
+    & > p
     {
         font-size: var(--font-size-s);
         font-weight: var(--font-weight-xxs);
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 500px)
 {
-    .p-authentication 
+    .p-authentication
     {
         width: 90%;
     }

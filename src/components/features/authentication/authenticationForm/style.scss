@@ -5,4 +5,11 @@
     gap: 20px;
     width: 100%;
     margin-top: 20px;
+
+    & > p 
+    {
+        text-align: center;
+        margin-top: 10px;
+        font-size: var(--font-size-xs);
+    }
 }
