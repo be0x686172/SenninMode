@@ -1,0 +1,45 @@
+.c-passwordChecklist 
+{
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius-primary);
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-container);
+    gap: 15px;
+    
+    .c-passwordChecklistCondition
+    {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        .d-circle
+        {
+            width: 8px;
+            height: 8px;
+            border-radius: 10px;
+            border: 1px solid;
+        }
+
+        p 
+        {
+            font-size: var(--font-size-xxs);
+            font-weight: var(--font-weight-m);
+        }
+    }
+
+    .c-passwordChecklistConditionSuccess
+    {
+        .d-circle
+        {
+            border: 2px solid var(--color-success);
+            background-color: var(--color-success);
+        }
+
+        p 
+        {
+            color: var(--color-success);
+            font-weight: var(--font-weight-xs);
+        }
+    }
+}

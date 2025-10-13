@@ -3,10 +3,14 @@ import TextInput from '../../../ui/form/textInput/TextInput';
 import SubmitInput from '../../../ui/form/submitInput/SubmitInput';
 import { verifyConfirmPassword, verifyValidEmail, verifyValidPassword } from '../../../../utils/form/form';
 import { useState } from 'react';
+import PasswordChecklist from '../../form/passwordChecklist/PasswordChecklist';
+import PasswordInput from '../../form/passwordInput/PasswordInput';
 
 const AuthenticationSignUp = () => {
 
     const [error, setError] = useState("");
+    const [passwordInputFocus, setPasswordInputFocus] = useState(false);
+    const [passwordInputChange, setPasswordInputChange] = useState(null);
 
     function handleForm(event)
     {
@@ -26,7 +30,10 @@ const AuthenticationSignUp = () => {
     return (
         <form className='component c-authenticationSignUp'> 
             <TextInput label="Email address" type="email" name="email" placeholder="example@mail.com"/>
-            <TextInput label="Password" type="password" name="password" placeholder="********"/>
+            <div>
+                <PasswordInput setPasswordInputFocus={setPasswordInputFocus} setPasswordInputChange={setPasswordInputChange} />
+                {passwordInputFocus ? <PasswordChecklist password={passwordInputChange} /> : ''}
+            </div>
             <TextInput label="Confirm your password" type="password" name="confirmPassword" placeholder="********"/>
             <SubmitInput value="Sign Up" onClick={(event) => handleForm(event)} />
             <p className='error'>{error}</p>

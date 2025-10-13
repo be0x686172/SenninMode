@@ -22,8 +22,8 @@ const AuthenticationToggle = ({ authMode, setAuthMode }) => {
 
     return (
         <div className='component c-authenticationToggle'>
-            <button className={authMode == 'signIn' ? 'active' : ''} onClick={(event) => changeMode(event)}>Sign In</button>
-            <button className={authMode == 'signUp' ? 'active' : ''} onClick={(event) => changeMode(event)}>Sign Up</button>
+            <button className={authMode == 'signIn' ? 'buttonActive' : ''} onClick={(event) => changeMode(event)}>Sign In</button>
+            <button className={authMode == 'signUp' ? 'buttonActive' : ''} onClick={(event) => changeMode(event)}>Sign Up</button>
             <div className='d-slider'></div>
         </div>
     );
