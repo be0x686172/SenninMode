@@ -6,12 +6,14 @@ import { useState } from 'react';
 import PasswordChecklist from '../../form/passwordChecklist/PasswordChecklist';
 import PasswordInput from '../../../ui/form/passwordInput/PasswordInput';
 import { signUp } from '../../../../services/supabase/supabaseAuthentication';
+import { useNavigate } from 'react-router';
 
 const AuthenticationSignUp = () => {
 
     const [error, setError] = useState("");
     const [passwordInputFocus, setPasswordInputFocus] = useState(false);
     const [passwordInputChange, setPasswordInputChange] = useState(null);
+    let navigate = useNavigate();
 
     async function handleForm(event)
     {
@@ -26,7 +28,7 @@ const AuthenticationSignUp = () => {
                 && verifyConfirmPassword(password, confirmPassword, setError)) {
                     setError("");
                     const data = await signUp(email, password, setError);
-                    if (data.user) console.log('navigate from signup to dashboard');
+                    if (data.user) navigate("/dashboard");
         }
     }
 

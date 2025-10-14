@@ -4,10 +4,12 @@ import SubmitInput from '../../../ui/form/submitInput/SubmitInput';
 import { useState } from 'react';
 import { verifyValidEmail } from '../../../../utils/form/form';
 import { signIn } from '../../../../services/supabase/supabaseAuthentication';
+import { useNavigate } from 'react-router';
 
 const AuthenticationSignIn = () => {
 
     const [error, setError] = useState("");
+    let navigate = useNavigate();
 
     async function handleForm(event)
     {
@@ -20,7 +22,7 @@ const AuthenticationSignIn = () => {
             const data = await signIn(email, password, setError);
             if (data && data.user) {
                 setError("");
-                console.log("navigate from login to dashboard");
+                navigate("/dashboard");
             }
         }
     }
