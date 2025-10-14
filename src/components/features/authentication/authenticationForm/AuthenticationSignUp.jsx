@@ -4,7 +4,8 @@ import SubmitInput from '../../../ui/form/submitInput/SubmitInput';
 import { verifyConfirmPassword, verifyValidEmail, verifyValidPassword } from '../../../../utils/form/form';
 import { useState } from 'react';
 import PasswordChecklist from '../../form/passwordChecklist/PasswordChecklist';
-import PasswordInput from '../../form/passwordInput/PasswordInput';
+import PasswordInput from '../../../ui/form/passwordInput/PasswordInput';
+import { signUp } from '../../../../services/supabase/supabaseAuthentication';
 
 const AuthenticationSignUp = () => {
 
@@ -12,7 +13,7 @@ const AuthenticationSignUp = () => {
     const [passwordInputFocus, setPasswordInputFocus] = useState(false);
     const [passwordInputChange, setPasswordInputChange] = useState(null);
 
-    function handleForm(event)
+    async function handleForm(event)
     {
         event.preventDefault();
 
@@ -24,6 +25,8 @@ const AuthenticationSignUp = () => {
             && verifyValidPassword(password, setError) 
                 && verifyConfirmPassword(password, confirmPassword, setError)) {
                     setError("");
+                    const data = await signUp(email, password, setError);
+                    if (data.user) console.log('navigate from signup to dashboard');
         }
     }
 
@@ -36,7 +39,7 @@ const AuthenticationSignUp = () => {
             </div>
             <TextInput label="Confirm your password" type="password" name="confirmPassword" placeholder="********"/>
             <SubmitInput value="Sign Up" onClick={(event) => handleForm(event)} />
-            <p className='error'>{error}</p>
+            <p>{error}</p>
         </form>
     );
 };
