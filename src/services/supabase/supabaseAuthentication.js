@@ -1,6 +1,6 @@
 import { supabase } from "./supabaseClient";
 
-// Sign Up
+// Create a new user
 export async function signUp(email, password, setError) { 
     const { data, error } = await supabase.auth.signUp({
         email: email,
@@ -12,7 +12,7 @@ export async function signUp(email, password, setError) {
     return data;
 }
 
-// Sign In
+// Sign in a user
 export async function signIn(email, password, setError) {
     const { data, error } = await supabase.auth.signInWithPassword({
         email: email,
@@ -20,6 +20,13 @@ export async function signIn(email, password, setError) {
     });
 
     if (error && error.message == "Invalid login credentials") setError("Invalid login credentials");
+
+    return data;
+}
+
+// Retrieve a session
+export async function getSession() {
+    const {data, error} = await supabase.auth.getSession();
 
     return data;
 }
