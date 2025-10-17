@@ -1,4 +1,32 @@
 .p-dashboard 
 {
-    
+    .d-center
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        & > p 
+        {
+            text-transform: uppercase;
+            font-weight: 250;
+            font-size: var(--font-size-xxs);
+            letter-spacing: 7px;
+            color: var(--color-text-tertiary);
+        }
+    }
+}
+
+@media screen and (max-width: 950px)
+{
+    .p-dashboard
+    {
+        width: 90%;
+    }
 }
