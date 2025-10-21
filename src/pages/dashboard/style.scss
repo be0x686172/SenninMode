@@ -1,0 +1,18 @@
+.p-dashboard
+{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    h1 
+    {
+        font-size: var(--font-size-small);
+        font-weight: 150;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: var(--color-text-secondary);
+    }
+}
